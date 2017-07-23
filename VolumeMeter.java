@@ -1,5 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.ImageIcon;
 import javax.swing.BoxLayout;
 import javax.swing.SwingUtilities;
 
@@ -8,6 +9,8 @@ import java.awt.Graphics;
 import java.awt.Dimension;
 import java.awt.GraphicsEnvironment;
 import java.awt.GraphicsDevice;
+
+import java.awt.MediaTracker;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -67,6 +70,7 @@ public class VolumeMeter extends JFrame {
         setLocation(16, 20); // Default position
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBackground(new Color(0, 0, 0, 0)); // Make frame transparent
+        setType(javax.swing.JFrame.Type.UTILITY);
         
         // Create volume bars and add to main panel
         Bar bar10 = new Bar(new Color(0xFF0000)); // Red
